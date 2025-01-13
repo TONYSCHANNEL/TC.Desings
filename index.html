@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>TC Desings</title>
+    <link rel="icon" href="/images/Logo 32x32 con fondo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Aquí inicia el NAVBAR-->
+    <header>
+        <div class="navbar">
+            <!-- Aquí es el logo de la página -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Logo 32x32.png" alt="Logo">
+                </a>
+            </div>
+            <!-- Aquí termina el logo de la página -->
+            <ul class="links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="desings.html">Diseños</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <!-- DROPDOWNMenú Responsive (La cosa que va a dar para abajo)-->
+        <div class="dropdown_menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="desings.html">Diseños</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+        </div>
+    </header>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+    </script>
+    <!-- Aquí termina el NAVBAR-->
+
+    <!-- Aquí inicia el diseños principal de la página -->
+    <main>
+        <section id="hero">
+            <h1>CRECE CON LOS MEJORES</h1>
+            <p>¡Eleva la calidad de tu marca!</p>
+
+            <div class="button-container">
+                <button class="btn_desings"><a href="desings.html">Diseños</a></button>
+                <button class="btn_videos"><a href="videos.html">Videos 3D</a></button>
+            </div>
+            <video onloadedmetadata="this.muted=true" autoplay muted playsinline loop>
+                <source src="Videos/Inicio.mp4">
+            </video>
+        </section>
+    </main>
+    <script src="main.js"></script>
+    <script src="script.js"></script>
+
+    <div class="textoprincipal">
+
+        <h1>¿Qué es TC Desings?</h1>
+        <p>TC Desings es la mejor opción para la creación de gorras, nos apasiona crear diseños 100% originales e innovadores, empezando desde cero. Transformamos tus bocetos e ideas en auténticas obras de arte, asegurándonos de que cada diseño sea único y refleje tu visión. Nos especializamos en crear diseños en 2D y animaciones en 3D que dan vida a cada detalle de tus gorras. Aquí, no creemos en copiar, sino en innovar, ofreciendo propuestas frescas y creativas que realmente se destacan. ¡Permítenos convertir tu idea en un diseño exclusivo que hable por sí mismo!</p>
+    </div>
+    <div class="imagen-manufactura">
+        <img id="imagenDetalle" src="images/Manufacturante.jpg" alt="Manufactura">
+    </div>
+    
+
+
+    <!-- Es el pie de página -->
+    <footer class="pie-página">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href=index.html class="Texto-TONYS-CHANNEL" style="color: rgb(255, 255, 255); text-decoration: none;">
+                            <h1>TC Desings</h1>
+                        </a>
+                </figure>
+            </div>
+        <div class="box">
+            <a href=contact.html class="Encha-chat" style="color: white; text-decoration: none;"><h1>Contacto</h1></a>
+        </div>
+            <div class="box">
+                <h1>Síguenos</h1>
+            </div>
+        </div>
+        <div class="red-social">
+            <a href="https://www.tiktok.com/@tc.desings" class="fab fa-tiktok" target="_blank"></a>
+            <a href="https://www.instagram.com/tc.desings/" class="fab fa-instagram" target="_blank"></a>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2025 <b>TC desings by TONYS</b> All rights reserved.</small>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/Archivos/Js/Scripts.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
